@@ -1,3 +1,15 @@
+# インストールコマンド
+- curl -s "https://laravel.build/example-app" | bash
+- cd example-app
+- ./vendor/bin/sail up
+- ./vendor/bin/sail composer require laravel/breeze --dev
+- sail artisan breeze:install react
+参考サイト：https://qiita.com/Sho-taro/items/820e4117c5b5f4c6717f
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
