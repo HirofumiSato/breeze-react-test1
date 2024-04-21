@@ -6,6 +6,15 @@
 - sail artisan breeze:install react
 参考サイト：https://qiita.com/Sho-taro/items/820e4117c5b5f4c6717f
 
+# <add-userlist>
+- ./vendor/bin/sail artisan migrate
+- ./vendor/bin/sail artisan db:seed
+- ./vendor/bin/sail artisan make:controller UserController --resource
+
+Users.jsxを/resources/pages配下に作成。
+
+ソース修正は`npm run dev`で画面に反映。
+
 
 
 
