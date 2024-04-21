@@ -7,15 +7,31 @@
 参考サイト：https://qiita.com/Sho-taro/items/820e4117c5b5f4c6717f
 
 # <add-userlist>
+### コマンド
 - ./vendor/bin/sail artisan migrate
 - ./vendor/bin/sail artisan db:seed
 - ./vendor/bin/sail artisan make:controller UserController --resource
 
 Users.jsxを/resources/pages配下に作成。
 
-ソース修正は`npm run dev`で画面に反映。
+ソース修正は`npm run dev`でサーバー起動で画面に反映。
+コマンドラインの操作の際は`ctrl + C`で止める
 
+# <add-articlelist>
+### コマンド
+- ./vendor/bin/sail artisan make:migration create_articles_table
+- ./vendor/bin/sail artisan make:factory ArticleFactory
+- ./vendor/bin/sail artisan make:model Article
+- ./vendor/bin/sail artisan make:controller ArticleController
 
+Articles.jsxを/resources/pages配下に作成。
+
+### マイグレーションとダミーデータ再作成
+- XXXX_XX_XX_XXXXXX_create_acticle_table.php
+- ArticleModel
+- ArticleFactory
+- Database.seederを修正後、
+`sail artisan migrate:fresh --seed`でダミーデータ再挿入
 
 
 

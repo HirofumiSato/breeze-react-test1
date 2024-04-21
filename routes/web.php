@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,6 +22,9 @@ Route::get('/dashboard', function () {
 
 //userlist
 Route::get('/users',[UserController::class,'index'])->middleware(['auth', 'verified'])->name('users');
+
+//Articlelist
+Route::get('/articles',[ArticleController::class,'index'])->middleware(['auth', 'verified'])->name('articles');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
